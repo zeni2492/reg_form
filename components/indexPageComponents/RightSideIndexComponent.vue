@@ -21,6 +21,28 @@
 </template>
 
 <style scoped>
+  .outerCircle {
+    width: 540px;
+    max-width: none;
+  }
+
+  .innerCircle {
+    width: 480px;
+    max-width: none;
+
+  }
+
+  .img {
+    width: 540px;
+    max-width: none;
+  }
+
+  .UnderText {
+    margin-top: 100px;
+
+  }
+
+
 @media screen and (max-width: 1240px) {
   .outerCircle {
     width: 340px;

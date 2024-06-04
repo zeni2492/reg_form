@@ -13,9 +13,27 @@ body {
   padding: 0;
   margin: 0;
   overflow-y: hidden;
+  overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
 }
+.outerCircle {
+    width: 430px;
+    max-width: none;
+  }
+  .innerCircle {
+    width: 380px;
+    max-width: none;
+    
+  }
+  .img {
+    width: 410px;
+    max-width: none;
 
+  }
+  .UnderText {
+    margin-top: 100px;
+    
+  } 
 
 
 @media screen and (max-width: 1030px) {

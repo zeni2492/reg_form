@@ -1,18 +1,21 @@
 <template>
   <div class="w-full OTPContainer flex justify-center">
     <div class=" flex justify-center flex-col">
+      <div class="w-full flex flex-col justify-center">
+
       <h1 class="text-5xl font-bold">Enter OTP</h1>
 
       <p class="text-base">Sent OTP on
         <span class="text-secondary">{{ $userData.email }}</span>
       </p>
-
-      <button @click.prevent="changeEmail" class="w-28 text-nowrap text-start">
+      <div class="w-100 flex justify-center">
+      <button @click.prevent="changeEmail" class="text-nowrap">
         <NuxtLink to="/signUp">
           <p class="text-primary">Change Email</p>
         </NuxtLink>
       </button>
-
+      </div>
+    </div>
       <form class="w-full flex flex-col mt-6">
 
         <div class="flex gap-4 inputs flex-wrap w-100 justify-center ">
@@ -71,13 +74,12 @@ const onKeyDown = (index, event) => {
 
 async function Submit() {
   try {
-    const response = await ofetch('https://dummyjson.com/users/add', {
+    const response = await ofetch('https://dummyjson.com/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         username: $userData.userName,
         password: $userData.password,
-        email: $userData.email,
       })
     });
     console.log(response);

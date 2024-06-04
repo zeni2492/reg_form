@@ -8,9 +8,6 @@
 
     <form action="submit" class="mt-6">
       <div class="flex flex-col">
-        <div v-if="CheckUserExisting">
-          <p class="text-center w-100 bg-red-500 text-white text-2xl rounded-xlg mb-base">User already exists</p>
-        </div>
         <div
           class="input-container w-100 py-5 pl-2 flex flex-row border-secondary border-2 border-opacity-50 bg-secondary bg-opacity-10 h-16 rounded-xlg outline-none items-center">
           <div class="flex justify-center items-center">
@@ -96,7 +93,6 @@ const passwordInput = ref();
 const passwordInputRepeat = ref('');
 const submitButton = ref();
 const passwordRepeat = ref('');
-const CheckUserExisting = ref(false);
 
 let checkbox = ref(false);
 
@@ -150,16 +146,6 @@ async function DisableButton() {
   $userData.setName(username.value);
   $userData.setEmail(email.value);
   $userData.setPassword(password.value);
-
-  const CheckUser = await ofetch(`http://dummyjson.com/users/search?q=${username.value}`);
-    if (CheckUser.users.length > 0) {
-      CheckUserExisting.value = true
-      return
-    }
-  else {
-    CheckUserExisting.value = false;
-  }
-  
   router.push('/oneTimePassword');
 }
 
@@ -209,4 +195,25 @@ onMounted(() => {
   top: -2px;
   border-radius: 5px;
 }
+
+.outerCircle {
+    width: 540px;
+    max-width: none;
+  }
+
+  .innerCircle {
+    width: 480px;
+    max-width: none;
+
+  }
+
+  .img {
+    width: 540px;
+    max-width: none;
+  }
+
+  .UnderText {
+    margin-top: 100px;
+
+  }
 </style>

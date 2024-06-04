@@ -47,12 +47,12 @@
               src="@/public/eye-slash.svg" alt=""></button>
         </div>
 
-        <div class="w-full flex flex-row h-7 items-center mt-base">
+        <div class="w-100 flex flex-row h-7 items-center mt-base flex-nowrap">
           <input :checked="checkbox" @change="CheckBox" type="checkbox" id="termsCheckbox" class="checkbox mr-base h-5 w-5">
-          <p class="text-base h-5 w-auto flex items-center">
+          <p class="terms text-base h-5 w-auto flex items-center flex-nowrap">
             Accept
-            <NuxtLink to="/signUp" class="ml-1">
-              <span class="text-secondary">terms and conditions</span>
+            <NuxtLink to="/signUp" class="ml-1 w-100">
+              <span class="terms text-secondary flex-nowrap">terms and conditions</span>
             </NuxtLink>
           </p>
         </div>

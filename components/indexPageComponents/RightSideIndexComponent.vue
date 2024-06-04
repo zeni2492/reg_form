@@ -56,11 +56,12 @@
   }
 
   .img {
-    width: 330px;
+    width: 290px;
   }
 
   .UnderText {
-    margin-top: 80px;
+    margin-top: 50px;
+    width: 200px;
   }
 }
 </style>
